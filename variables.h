@@ -140,6 +140,21 @@
 #define TW_USE_SHA2                 "tw_use_sha2"
 #define TW_NO_SHA2                  "tw_no_sha2"
 
+#define PB_SURVIVAL_BACKUP          "OTA"
+#define PB_SURVIVAL_BACKUP_NAME       "pb_survival_backup_folder_name"
+#define PB_SURVIVAL_FOLDER      "/sdcard/PB"
+#define PB_SURVIVAL_BACKUP       "OTA"
+#define PB_FILES_BACKUPS_FOLDER_VAR       "pb_files_backup_folder_var"
+#define PB_DISABLE_BOOT_CHK       "pb_disable_boot_check"
+#define PB_DO_SYSTEM_ON_OTA       "pb_include_system_survival"
+#define PB_ACTUAL_BUILD_VAR              "pb_actual_build"
+#define PB_INCREMENTAL_PACKAGE          "pb_support_miui_ota"
+#define PB_MIUI_ZIP_TMP                    "pb_miui_zip_tmp"
+#define PB_LOADED_FINGERPRINT                    "pb_loaded_singature"
+#define PB_INCREMENTAL_OTA_FAIL                 "pb_ota_fail"
+#define PB_RUN_SURVIVAL_BACKUP                 "pb_run_survival_backup"
+#define PB_METADATA_PRE_BUILD                 "pb_pre_build"
+
 // Also used:
 //   tw_boot_is_mountable
 //   tw_system_is_mountable
