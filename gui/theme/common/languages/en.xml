@@ -694,6 +694,9 @@
 		<string name="include_kernel_log">Include Kernel Log</string>
 		<string name="sha2_chk">Use SHA2 for hashing</string>
 		<string name="unable_set_boot_slot">Error changing bootloader boot slot to {1}</string>
+		<string name="incota_chk">Incremental OTA signature verification</string>
+		<string name="incsys_chk">Include system in OTA survival</string>
+		<string name="supmiui_chk">Support MIUI Incremental OTA</string>
 		
 		<!--mod tools-->
 		<string name="tools_hdr">Tools</string>
@@ -766,7 +769,5 @@
 		<string name="about_pbtwrp">About PBTWRP</string>
 		<string name="thanksto">Thanks to</string>
 		<string name="toolscr">Tools Credit</string>
-		<string name="contributors">Contributors</string>
 	</resources>
 </language>
-
