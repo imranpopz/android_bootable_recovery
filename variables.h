@@ -154,6 +154,10 @@
 #define PB_INCREMENTAL_OTA_FAIL                 "pb_ota_fail"
 #define PB_RUN_SURVIVAL_BACKUP                 "pb_run_survival_backup"
 #define PB_METADATA_PRE_BUILD                 "pb_pre_build"
+#define PB_INSTALL_PREBUILT_ZIP       "pb_install_built_in_zip"
+#define PB_CALL_DEACTIVATION         "pb_call_deactivation_process"
+#define PB_MIN_EXPECTED_FP_SIZE 30
+#define PB_DISABLE_SECURE_BOOT           "pb_reboot_disable_secure_boot"
 
 // Also used:
 //   tw_boot_is_mountable

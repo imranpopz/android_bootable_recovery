@@ -740,6 +740,9 @@ void DataManager::SetDefaultValues()
      	mConst.SetValue(PB_ACTUAL_BUILD_VAR, PB_BUILD);
     	mConst.SetValue(PB_TMP_SCRIPT_DIR, "/tmp/pb");  
 	mConst.SetValue(PB_COMPATIBILITY_DEVICE, PB_DEVICE); 
+	mData.SetValue(PB_INSTALL_PREBUILT_ZIP, "0");
+	mData.SetValue(PB_CALL_DEACTIVATION, "0");
+	mPersist.SetValue(PB_DISABLE_SECURE_BOOT, "0");
 
 	mPersist.SetValue(TW_INSTALL_REBOOT_VAR, "0");
 	mPersist.SetValue(TW_SIGNED_ZIP_VERIFY_VAR, "0");

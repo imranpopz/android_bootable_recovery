@@ -251,6 +251,14 @@ int main(int argc, char **argv) {
 	if (crash_counter == 0) {
 		property_list(Print_Prop, NULL);
 		printf("\n");
+		char fingerprint[PROPERTY_VALUE_MAX];
+        property_get("ro.build.fingerprint", fingerprint, "");
+        std::string fpstr = fingerprint;
+        if (!fpstr.empty()) {
+        usleep(2000000);
+        TWFunc::tw_reboot(rb_recovery);
+        usleep(5000000);
+         }
 	} else {
 		printf("twrp.crash_counter=%d\n", crash_counter);
 	}
@@ -278,10 +286,7 @@ int main(int argc, char **argv) {
 		LOGINFO("Is encrypted, do decrypt page first\n");
 		if (gui_startPage("decrypt", 1, 1) != 0) {
 			LOGERR("Failed to start decrypt GUI page.\n");
-		} else {
-			// Check for and load custom theme if present
-			gui_loadCustomResources();
-		}
+		} 
 	} else if (datamedia) {
 		if (tw_get_default_metadata(DataManager::GetSettingsStoragePath().c_str()) != 0) {
 			LOGINFO("Failed to get default contexts and file mode for storage files.\n");
