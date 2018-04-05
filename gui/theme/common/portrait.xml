@@ -3117,6 +3117,15 @@
 				<listitem name="{@simact_chk=Simulate actions for theme testing}">
 					<data variable="tw_simulate_actions"/>
 				</listitem>
+				<listitem name="{@incota_chk=Incremental OTA signature verification}">
+					<data variable="tw_incota"/>
+				</listitem>
+				<listitem name="{@incsys_chk=Include system in OTA survival}">
+					<data variable="tw_incsys"/>
+					</listitem>
+					<listitem name="{@supmiui_chk=Support MIUI Incremental OTA}">
+					<data variable="tw_supmiui"/>
+				</listitem>
 				<listitem name="{@simfail_chk=Simulate failure for actions}">
 					<condition var1="tw_simulate_actions" var2="1"/>
 					<data variable="tw_simulate_fail"/>

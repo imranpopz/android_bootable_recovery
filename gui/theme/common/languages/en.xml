@@ -767,6 +767,11 @@
 		<string name="thanksto">Thanks to</string>
 		<string name="toolscr">Tools Credit</string>
 		<string name="contributors">Contributors</string>
+
+		<!-- Settings -->
+		<string name="incota_chk">Incremental OTA signature verification</string>
+		<string name="incsys_chk">Include system in OTA survival</string>
+		<string name="supmiui_chk">Support MIUI Incremental OTA</string>
 	</resources>
 </language>
 
