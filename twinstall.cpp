@@ -266,7 +266,7 @@ string pre_build = pre_something + "build";
   }	
   }
       if (Zip->EntryExists(bootloader)) 
-	  gui_msg(Msg(msg::kWarning, "pb_zip_have_bootloader=Warning: RedWolf detected bootloader inside of the {1}")(path));
+	  gui_msg(Msg(msg::kWarning, "pb_zip_have_bootloader=Warning: PitchBlack detected bootloader inside of the {1}")(path));
   }
 	// If exists, extract file_contexts from the zip file
 	if (!Zip->EntryExists("file_contexts")) {
