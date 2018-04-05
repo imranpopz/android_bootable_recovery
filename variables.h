@@ -140,6 +140,11 @@
 #define TW_USE_SHA2                 "tw_use_sha2"
 #define TW_NO_SHA2                  "tw_no_sha2"
 
+// PitchBlack Variables
+#define PB_BUILD                TW_DEVICE_VERSION
+#define PB_DEVICE               PB_DEVICE_MODEL
+#define PB_VERSION              TW_MAIN_VERSION_STR
+
 #define PB_SURVIVAL_BACKUP          "OTA"
 #define PB_SURVIVAL_BACKUP_NAME       "pb_survival_backup_folder_name"
 #define PB_SURVIVAL_FOLDER      "/sdcard/PB"
@@ -158,6 +163,12 @@
 #define PB_CALL_DEACTIVATION         "pb_call_deactivation_process"
 #define PB_MIN_EXPECTED_FP_SIZE 30
 #define PB_DISABLE_SECURE_BOOT           "pb_reboot_disable_secure_boot"
+#define PB_DISABLE_FORCED_ENCRYPTION           "pb_reboot_forced_encryption_check"
+#define PB_DISABLE_DM_VERITY           "pb_reboot_dm_verity_check"
+#define PB_SURVIVAL_FOLDER_VAR      "pb_survival_backup_folder_path"
+#define PB_TMP_SCRIPT_DIR       "pb_tmp_script_directory"
+#define PB_COMPATIBILITY_DEVICE         "pb_compatibility_pb_device"
+
 
 // Also used:
 //   tw_boot_is_mountable
