@@ -46,6 +46,12 @@ else
     LOCAL_CFLAGS += -DTW_DEVICE_VERSION='"-0"'
 endif
 
+DEVICE := $(subst omni_,,$(TARGET_PRODUCT))
+
+ifeq ($(PB_DEVICE_MODEL),)
+    LOCAL_CFLAGS += -DPB_DEVICE_MODEL='"$(DEVICE)"'
+endif
+
 LOCAL_SRC_FILES := \
     twrp.cpp \
     fixContexts.cpp \
