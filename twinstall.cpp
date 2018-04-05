@@ -127,8 +127,31 @@ static int switch_to_new_properties()
 }
 
 static int Install_Theme(const char* path, ZipWrap *Zip) {
-Zip->Close();
-	return INSTALL_CORRUPT;	
+#ifdef TW_OEM_BUILD // We don't do custom themes in OEM builds
+	Zip->Close();
+	return INSTALL_CORRUPT;
+#else
+	if (!Zip->EntryExists("ui.xml")) {
+		return INSTALL_CORRUPT;
+	}
+	Zip->Close();
+	if (!PartitionManager.Mount_Settings_Storage(true))
+		return INSTALL_ERROR;
+	string theme_path = DataManager::GetSettingsStoragePath();
+	theme_path += "/TWRP/theme";
+	if (!TWFunc::Path_Exists(theme_path)) {
+		if (!TWFunc::Recursive_Mkdir(theme_path)) {
+			return INSTALL_ERROR;
+		}
+	}
+	theme_path += "/ui.zip";
+	if (TWFunc::copy_file(path, theme_path, 0644) != 0) {
+		return INSTALL_ERROR;
+	}
+	LOGINFO("Installing custom theme '%s' to '%s'\n", path, theme_path.c_str());
+	PageManager::RequestReload();
+	return INSTALL_SUCCESS;
+#endif
 }
 
 static int Prepare_Update_Binary(const char *path, ZipWrap *Zip, int* wipe_cache) {

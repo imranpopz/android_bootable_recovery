@@ -251,14 +251,6 @@ int main(int argc, char **argv) {
 	if (crash_counter == 0) {
 		property_list(Print_Prop, NULL);
 		printf("\n");
-		char fingerprint[PROPERTY_VALUE_MAX];
-        property_get("ro.build.fingerprint", fingerprint, "");
-        std::string fpstr = fingerprint;
-        if (!fpstr.empty()) {
-        usleep(2000000);
-        TWFunc::tw_reboot(rb_recovery);
-        usleep(5000000);
-         }
 	} else {
 		printf("twrp.crash_counter=%d\n", crash_counter);
 	}
