@@ -769,10 +769,7 @@
 		<string name="contributors">Contributors</string>
 
 		<!-- Settings -->
-		<string name="incota_chk">Incremental OTA signature verification</string>
-		<string name="incsys_chk">Include system in OTA survival</string>
-		<string name="supmiui_chk">Support MIUI Incremental OTA</string>
-
+		<string name="pb_support_miui_ota_chk">Support MIUI Incremental OTA</string>
 		<string name="pb_incremental_ota_status_enabled">Support MIUI Incremental package status: Enabled</string>
 		<string name="pb_incremental_ota_status_disabled">Support MIUI Incremental package status: Disabled</string>
 		<string name="pb_incremental_package_detected">Detected Incremental package '{1}'</string>

@@ -3117,13 +3117,13 @@
 				<listitem name="{@simact_chk=Simulate actions for theme testing}">
 					<data variable="tw_simulate_actions"/>
 				</listitem>
-				<listitem name="{@incota_chk=Incremental OTA signature verification}">
+				<listitem name="{@pb_verify_incremental_ota_signature_chk=Incremental OTA signature verification}">
 					<data variable="pb_verify_incremental_ota_signature"/>
 				</listitem>
-				<listitem name="{@incsys_chk=Include system in OTA survival}">
+				<listitem name="{@pb_include_system_survival_chk=Include system in OTA survival}">
 					<data variable="pb_include_system_survival"/>
 					</listitem>
-					<listitem name="{@supmiui_chk=Support MIUI Incremental OTA}">
+					<listitem name="{@pb_support_miui_ota_chk=Support MIUI Incremental OTA}">
 					<data variable="pb_support_miui_ota"/>
 				</listitem>
 				<listitem name="{@simfail_chk=Simulate failure for actions}">
