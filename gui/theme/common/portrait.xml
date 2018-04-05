@@ -3118,13 +3118,13 @@
 					<data variable="tw_simulate_actions"/>
 				</listitem>
 				<listitem name="{@incota_chk=Incremental OTA signature verification}">
-					<data variable="tw_incota"/>
+					<data variable="pb_verify_incremental_ota_signature"/>
 				</listitem>
 				<listitem name="{@incsys_chk=Include system in OTA survival}">
-					<data variable="tw_incsys"/>
+					<data variable="pb_include_system_survival"/>
 					</listitem>
 					<listitem name="{@supmiui_chk=Support MIUI Incremental OTA}">
-					<data variable="tw_supmiui"/>
+					<data variable="pb_support_miui_ota"/>
 				</listitem>
 				<listitem name="{@simfail_chk=Simulate failure for actions}">
 					<condition var1="tw_simulate_actions" var2="1"/>
