@@ -1047,7 +1047,6 @@ int GUIAction::flash(std::string arg)
 		 TWFunc::Deactivation_Process();
 		 DataManager::SetValue(PB_CALL_DEACTIVATION, 0);
 		 }
-		  notify_after_install();
 		}
          
          reinject_after_flash();
