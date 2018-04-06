@@ -478,7 +478,7 @@ std::string dm_verity_prop_true = dm_verity_prop + "=true";
 			// Unpack boot image
 	         TWFunc::Dumpb(true, true);
 				
-			   if (DataManager::GetIntValue(PW_DISABLE_DM_VERITY) == 1) {
+			   if (DataManager::GetIntValue(PB_DISABLE_DM_VERITY) == 1) {
             std::string verity = "verify";
 			std::string one_verity = "," + verity;
 			std::string two_verity = verity + ",";
