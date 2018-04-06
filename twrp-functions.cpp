@@ -499,7 +499,8 @@ std::string dm_verity_prop_true = dm_verity_prop + "=true";
              File << dm_verity_prop_false;
              File.close();
              }			
-			}
+		    }
+	}
 			
 	          // Advanced stock recovery replace
 	            if (DataManager::GetIntValue(PB_DONT_REPLACE_STOCK) != 1) {
