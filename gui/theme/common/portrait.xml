@@ -3123,8 +3123,15 @@
 				<listitem name="{@pb_include_system_survival_chk=Include system in OTA survival}">
 					<data variable="pb_include_system_survival"/>
 					</listitem>
-					<listitem name="{@pb_support_miui_ota_chk=Support MIUI Incremental OTA}">
+				<listitem name="{@pb_support_miui_ota_chk=Support MIUI Incremental OTA}">
 					<data variable="pb_support_miui_ota"/>
+				</listitem>
+				<listitem name="{@pb_advanced_stock_recovery=Simulate failure for actions}">
+					<data variable="pb_reboot_advanced_stock_recovery_check"/>
+				</listitem>
+				<listitem name="{@pb_reboot_dont_disable_stock_recovery_chk=}">
+					<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
+					<data variable="pb_reboot_dont_disable_stock_recovery"/>
 				</listitem>
 				<listitem name="{@simfail_chk=Simulate failure for actions}">
 					<condition var1="tw_simulate_actions" var2="1"/>
