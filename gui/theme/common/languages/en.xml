@@ -740,7 +740,7 @@
 		
 		<!--PBTWRP Themes-->
 		<string name="pbthemes">Themes</string>
-	    <string name="pbthemes_hdr">Themes</string>
+	    	<string name="pbthemes_hdr">Themes</string>
 		<string name="theme0_btn">PBTWRP Def. Black</string>
 		<string name="theme0_text">This will restore PBTWRP Default Black theme</string>		
 		<string name="theme0_confirm">Sure?</string>
@@ -792,6 +792,7 @@
 		<string name="pb_incremental_ota_bak">OTA_BAK -- done!</string>
 		<string name="pb_advanced_stock_recovery">Aggressive stock recovery deactivation</string>
 		<string name="pb_reboot_dont_disable_stock_recovery_chk">Don't disable stock recovery replace</string>
+		<string name="pb_dmverity_chk">Disable DM-Verity</string>
 	</resources>
 </language>
 

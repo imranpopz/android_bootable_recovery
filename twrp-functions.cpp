@@ -478,7 +478,28 @@ std::string dm_verity_prop_true = dm_verity_prop + "=true";
 			// Unpack boot image
 	         TWFunc::Dumpb(true, true);
 				
-
+			   if (DataManager::GetIntValue(PW_DISABLE_DM_VERITY) == 1) {
+            std::string verity = "verify";
+			std::string one_verity = "," + verity;
+			std::string two_verity = verity + ",";
+			std::string support_scfs = "support_scfs";
+			std::string one_support_scfs = "," + support_scfs;
+			std::string two_support_scfs = support_scfs + ",";
+			TWFunc::Replace_Word_In_File(fstab, one_verity, "");
+			TWFunc::Replace_Word_In_File(fstab, two_verity, "");
+			TWFunc::Replace_Word_In_File(fstab, verity, "");
+			TWFunc::Replace_Word_In_File(fstab, one_support_scfs, "");
+			TWFunc::Replace_Word_In_File(fstab, two_support_scfs, "");
+			TWFunc::Replace_Word_In_File(fstab, support_scfs, "");
+			if (TWFunc::CheckWord(default_prop, dm_verity_prop)) {
+            TWFunc::Replace_Word_In_File(default_prop, dm_verity_prop_true, dm_verity_prop_false);
+             } else {
+             ofstream File(default_prop.c_str(), std::ios::app);
+             if (File.is_open()) {
+             File << dm_verity_prop_false;
+             File.close();
+             }			
+			}
 			
 	          // Advanced stock recovery replace
 	            if (DataManager::GetIntValue(PB_DONT_REPLACE_STOCK) != 1) {

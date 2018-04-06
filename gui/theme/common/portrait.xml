@@ -3133,6 +3133,9 @@
 					<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
 					<data variable="pb_reboot_dont_disable_stock_recovery"/>
 				</listitem>
+				<listitem name="{@pb_dmverity_chk=Zip signature verification}">
+					<data variable="pb_reboot_dm_verity_check"/>
+				</listitem>
 				<listitem name="{@simfail_chk=Simulate failure for actions}">
 					<condition var1="tw_simulate_actions" var2="1"/>
 					<data variable="tw_simulate_fail"/>
