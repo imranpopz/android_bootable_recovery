@@ -743,6 +743,8 @@ void DataManager::SetDefaultValues()
 	mData.SetValue(PB_INSTALL_PREBUILT_ZIP, "0");
 	mData.SetValue(PB_CALL_DEACTIVATION, "0");
 	mPersist.SetValue(PB_DISABLE_SECURE_BOOT, "0");
+	mPersist.SetValue(PB_DONT_REPLACE_STOCK, "0");
+	mPersist.SetValue(PB_ADVANCED_STOCK_REPLACE, "1");
 
 	mPersist.SetValue(TW_INSTALL_REBOOT_VAR, "0");
 	mPersist.SetValue(TW_SIGNED_ZIP_VERIFY_VAR, "0");

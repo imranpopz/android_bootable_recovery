@@ -168,7 +168,8 @@
 #define PB_SURVIVAL_FOLDER_VAR      "pb_survival_backup_folder_path"
 #define PB_TMP_SCRIPT_DIR       "pb_tmp_script_directory"
 #define PB_COMPATIBILITY_DEVICE         "pb_compatibility_pb_device"
-
+#define PB_ADVANCED_STOCK_REPLACE           "pb_reboot_advanced_stock_recovery_check"
+#define PB_DONT_REPLACE_STOCK       "pb_reboot_dont_disable_stock_recovery"
 
 // Also used:
 //   tw_boot_is_mountable

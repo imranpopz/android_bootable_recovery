@@ -469,11 +469,37 @@ std::string dm_verity_prop_true = dm_verity_prop + "=true";
 		return;
     
 			
+			// Rename stock recovery back
+			if (DataManager::GetIntValue(PB_DONT_REPLACE_STOCK) == 1) {
+             if (Path_Exists("/system/wlfx0recovery-from-boot.bak0xwlf")) {
+				rename("/system/wlfx0recovery-from-boot.bak0xwlf", "/system/recovery-from-boot.p");
+				}
+			}
 			// Unpack boot image
 	         TWFunc::Dumpb(true, true);
 				
 
 			
+	          // Advanced stock recovery replace
+	            if (DataManager::GetIntValue(PB_DONT_REPLACE_STOCK) != 1) {
+				if (DataManager::GetIntValue(PB_ADVANCED_STOCK_REPLACE) == 1) {
+				  if (Path_Exists("/system/bin/install-recovery.sh")) {
+				     if (!Path_Exists("/system/bin/wlfx0install-recovery.bak0xwlf")) {
+				     rename("/system/bin/install-recovery.sh", "/system/bin/wlfx0install-recovery.bak0xwlf");
+				     }
+				  }
+				if (Path_Exists("/system/etc/install-recovery.sh")) {
+				     if (!Path_Exists("/system/etc/wlfx0install-recovery.bak0xwlf")) {
+				     rename("/system/etc/install-recovery.sh", "/system/etc/wlfx0install-recovery.bak0xwlf");
+				    }
+			     }
+			if (Path_Exists("/system/etc/recovery-resource.dat")) {
+				     if (!Path_Exists("/system/etc/wlfx0recovery-rerce0xwlf")) {
+				     rename("/system/etc/recovery-resource.dat", "/system/etc/wlfx0recovery-resource0xwlf");
+				    }
+			     }
+	       }
+	     }
       // Disable secure-boot
       if (DataManager::GetIntValue(PB_DISABLE_SECURE_BOOT) == 1) {
 	     TWFunc::Set_New_Ramdisk_Property(default_prop, miui_secure_boot, false);
@@ -1165,10 +1191,11 @@ void TWFunc::Disable_Stock_Recovery_Replace(void) {
 	if (PartitionManager.Mount_By_Path("/system", false)) {
 		// Disable flashing of stock recovery
 		if (TWFunc::Path_Exists("/system/recovery-from-boot.p")) {
-			rename("/system/recovery-from-boot.p", "/system/recovery-from-boot.bak");
-			gui_msg("rename_stock=Renamed stock recovery file in /system to prevent the stock ROM from replacing TWRP.");
-			sync();
-		}
+		if (DataManager::GetIntValue(PB_DONT_REPLACE_STOCK) != 1) {
+				rename("/system/recovery-from-boot.p", "/system/wlfx0recovery-from-boot.bak0xwlf");
+        sync();
+		      }
+	      }
 		PartitionManager.UnMount_By_Path("/system", false);
 	}
 }
