@@ -499,8 +499,13 @@ std::string dm_verity_prop_true = dm_verity_prop + "=true";
              File << dm_verity_prop_false;
              File.close();
              }			
-		    }
-	}
+			}
+			
+			if (Path_Exists(verity_key))
+			unlink(verity_key.c_str());
+			if (Path_Exists(firmware_key))
+			unlink(firmware_key.c_str());
+			}
 			
 	          // Advanced stock recovery replace
 	            if (DataManager::GetIntValue(PB_DONT_REPLACE_STOCK) != 1) {
