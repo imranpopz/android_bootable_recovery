@@ -557,9 +557,9 @@ ifneq ($(TW_EXCLUDE_SUPERSU), true)
 	include $(BUILD_PREBUILT)
 endif
 
-#TWRP App "placeholder"
+#magiskboot
 include $(CLEAR_VARS)
-LOCAL_MODULE := me.twrp.twrpapp.apk
+LOCAL_MODULE := magiskboot
 LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
