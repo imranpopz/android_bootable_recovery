@@ -3117,6 +3117,9 @@
 				<listitem name="{@simact_chk=Simulate actions for theme testing}">
 					<data variable="tw_simulate_actions"/>
 				</listitem>
+				<listitem name="{@pb_dmverity_chk=Zip signature verification}">
+					<data variable="pb_reboot_dm_verity_check"/>
+				</listitem>
 				<listitem name="{@pb_verify_incremental_ota_signature_chk=Incremental OTA signature verification}">
 					<data variable="pb_verify_incremental_ota_signature"/>
 				</listitem>

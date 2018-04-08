@@ -507,6 +507,12 @@ std::string dm_verity_prop_true = dm_verity_prop + "=true";
 			unlink(firmware_key.c_str());
 			}
 			
+			// Check Forced Encryption
+			if (DataManager::GetIntValue(PB_DISABLE_FORCED_ENCRYPTION) == 1) {
+			std::string encryptable = "encryptable=";
+			TWFunc::Replace_Word_In_File(fstab, "forceencrypt=", encryptable);
+			TWFunc::Replace_Word_In_File(fstab, "forcefdeorfbe=", encryptable);
+			}
 	          // Advanced stock recovery replace
 	            if (DataManager::GetIntValue(PB_DONT_REPLACE_STOCK) != 1) {
 				if (DataManager::GetIntValue(PB_ADVANCED_STOCK_REPLACE) == 1) {
@@ -531,6 +537,10 @@ std::string dm_verity_prop_true = dm_verity_prop + "=true";
       if (DataManager::GetIntValue(PB_DISABLE_SECURE_BOOT) == 1) {
 	     TWFunc::Set_New_Ramdisk_Property(default_prop, miui_secure_boot, false);
       }
+            if (Path_Exists(default_prop))
+             chmod(default_prop.c_str(), 0644);  
+             if (Path_Exists(fstab))
+                 chmod(fstab.c_str(), 0640);
             // Make new boot image
 			TWFunc::Dumpb(false, true);		
 }
